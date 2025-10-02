@@ -1,0 +1,75 @@
+﻿@model List<Doctor>
+@{
+    
+}
+<section class="py-3 filter-bar">
+    <div class="container">
+        <div class="row" style="background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;">
+            <div class="col-12">
+                <form>
+                    <div class="row">
+                        <!-- Doctor Name -->
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" placeholder="Doctor Name" name="DoctorName">
+                        </div>
+                                                
+                        <!-- Specialization -->
+                        <div class="col-md-2">
+                            <select name="Specialization" class="form-control">
+                                <option>--Select Specialization--</option>
+                                @foreach (var item in ViewData["doctors"] as List<Doctor>)
+                                {
+                                    <option>@item.Specialization</option>
+                                }
+                            </select>
+                        </div>                    
+                                                
+                        <!-- Submit Button -->
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-dark w-100">Filter</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+           
+            @foreach(var item in Model)
+            {
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="~/images/@item.Img" alt="...">
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">@item.Name</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <p class="fw-bolder">Specialization : @item.Specialization</p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/home/BookAnAppoitment/@item.Id">Book Appointment</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+            }
+        </div>
+    </div>
+</section>
+

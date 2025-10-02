@@ -1,0 +1,18 @@
+﻿@using WeekTaskMVC.ViewModels
+@model PersonVM // strong view
+<ul>
+    <h1>
+        Personal Info
+    </h1>
+    @foreach(var item in Model.Persons)
+    {
+    <li>Name: @item.Id </li>
+    <li>Name: @item.Name </li>
+    <li>Address: @item.Address </li>
+    <li>Salary: @item.Salary </li>
+        <hr />
+    }
+    Total Counr : @Model.TotalCount
+    <hr />
+    
+</ul>

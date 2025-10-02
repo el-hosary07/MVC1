@@ -1,0 +1,28 @@
+﻿@model Doctor
+<div class="container">
+    <h2> Book An Appointment With : @Model.Name  </h2>
+    <form method="post">
+        <input type="hidden" name="DocId" value="@Model.Id" />
+        <div class="mb-3">
+            <label for="Name" class="form-label">Name </label>
+            <input type="text" name="PatientName" placeholder="Your Name" class="form-control" id="Name">
+
+        </div>
+
+        
+        <div class="mb-3">
+            <label for="Appointment" class="form-label">Appointment Date </label>
+            <input type="datetime-local" name="AppointDate" placeholder="student Appointment" class="form-control" id="Appointment">
+
+        </div>
+
+        <div class="mb-3">
+            <label for="Appointment" class="form-label">Appointment Time </label>
+            <input type="time" name="AppointTime" placeholder="student Appointment" class="form-control" id="Appointment">
+
+        </div>
+
+
+        <input type="submit" value="BookAnAppoitment" class="btn btn-primary" />
+    </form>
+</div>

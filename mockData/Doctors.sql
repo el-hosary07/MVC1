@@ -1,0 +1,10 @@
+insert into Doctors (Name, Specialization) values ('Kelly Leggin', 'Oral and Maxillofacial Surgeon');
+insert into Doctors (Name, Specialization) values ('Kip Malitrott', 'Dentist');
+insert into Doctors (Name, Specialization) values ('Bradly Vella', 'Oral and Maxillofacial Surgeon');
+insert into Doctors (Name, Specialization) values ('Hali Swire', 'Periodontist');
+insert into Doctors (Name, Specialization) values ('Elisa Andreu', 'Periodontist');
+insert into Doctors (Name, Specialization) values ('Carena Bonnavant', 'Oral and Maxillofacial Surgeon');
+insert into Doctors (Name, Specialization) values ('Merralee Marunchak', 'Periodontist');
+insert into Doctors (Name, Specialization) values ('Tobit Heather', 'Periodontist');
+insert into Doctors (Name, Specialization) values ('Doyle Silburn', 'Periodontist');
+insert into Doctors (Name, Specialization) values ('Loraine Karlowicz', 'Oral and Maxillofacial Surgeon');
